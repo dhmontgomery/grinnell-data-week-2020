@@ -54,12 +54,13 @@ urban_words %>%
 	scale_color_manual(values = c("darkblue", "darkorange", "darkred", "darkgreen")) +
 	theme_minimal() +
 	theme(axis.title.x = element_blank(), # Hide unnecessary "Year" x-axis title
-		  axis.ticks.x = element_line()) + # add x-axis ticks for legibility
-	# add labels
+		  axis.ticks.x = element_line(), # add x-axis ticks for legibility
+		  legend.position = "top") +
+	# Add labels
 	labs(title = "Use of 'city,' 'cities,' or 'urban' in States of the Union",
 		 caption = "Source: The American Presidency Project (David H. Montgomery/CityLab)",
 		 y = "Percent of all words",
-		 fill = "Party", color = "Party")
+		 fill = "Party:", color = "Party:")
 
 ####
 
@@ -84,7 +85,8 @@ rural_words %>%
 	scale_color_manual(values = c("darkblue", "darkorange", "darkred", "darkgreen")) +
 	theme_citylab() +
 	theme(axis.title.x = element_blank(),
-		  axis.ticks.x = element_line()) +
+		  axis.ticks.x = element_line(),
+		  legend.position = "top") +
 	labs(title = "Use of 'rural,' 'farm(s)' or 'farmer(s)' in States of the Union",
 		 caption = "Source: The American Presidency Project (David H. Montgomery/CityLab)",
 		 y = "Percent of all words",
