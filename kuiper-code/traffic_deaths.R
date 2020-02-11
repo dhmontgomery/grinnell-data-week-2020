@@ -26,7 +26,7 @@ traffic_deaths %>% # Start with data
 			  aes(label = city), 
 			  hjust = 0, # Align left
 			  nudge_x = 0.1, # Create separation from dots
-			  size = 7) +
+			  size = 6) +
 	scale_x_continuous(expand = expand_scale(mult = c(0.05, 0.3))) + # Add lots of space for labels on the right side of the graph
 	scale_color_brewer(palette = "Dark2") + # Pick a pretty color palette
 	theme_minimal() + # Pick a theme
